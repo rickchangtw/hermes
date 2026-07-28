@@ -1,0 +1,28 @@
+name: community
+label: Community Platform
+description: "600 戶社區系統適配器 - 社區系統適配器"
+adapter_factory: "_build_adapter"
+check_fn: "_check_community_requirements"
+is_connected: "_is_connected"
+required_env:
+  - "COMMUNITY_ADAPTER_TOKEN"
+install_hint: "pip install 'hermes-agent[community]'"
+setup_fn: "interactive_setup"
+apply_yaml_config_fn: "_apply_yaml_config"
+allowed_users_env: "COMMUNITY_ALLOWED_USERS"
+allow_all_env: "COMMUNITY_ALLOW_ALL_USERS"
+cron_deliver_env_var: "COMMUNITY_HOME_CHANNEL"
+standalone_sender_fn: "_standalone_send"
+max_message_length: 4096
+emoji: "🏠"
+allow_update_command: true
+
+# 7-Agent 系統
+agents:
+  - admin
+  - property
+  - security
+  - fire
+  - energy
+  - notify
+  - resident
