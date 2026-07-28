@@ -1,4 +1,5 @@
 .DS_Store
+.git-corrupt/
 /venv/
 /venv.old/
 /venv.stale.runtime-*/
